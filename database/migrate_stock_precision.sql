@@ -1,0 +1,10 @@
+USE `jazuva_db`;
+
+ALTER TABLE `ingredients`
+  MODIFY COLUMN `stock` DECIMAL(12, 4) NOT NULL DEFAULT 0.0000,
+  MODIFY COLUMN `min_stock` DECIMAL(12, 4) NOT NULL DEFAULT 5.0000;
+
+ALTER TABLE `stock_movements`
+  MODIFY COLUMN `quantity` DECIMAL(12, 4) NOT NULL,
+  MODIFY COLUMN `previous_stock` DECIMAL(12, 4) NOT NULL,
+  MODIFY COLUMN `current_stock` DECIMAL(12, 4) NOT NULL;

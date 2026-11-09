@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ambience" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#4A2818" />
+      <stop offset="60%" stop-color="#24120A" />
+      <stop offset="100%" stop-color="#150A05" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#ambience)" />
+  <!-- Pendant warm lamps -->
+  <line x1="200" y1="0" x2="200" y2="120" stroke="#8B5A2B" stroke-width="2"/>
+  <ellipse cx="200" cy="120" rx="30" ry="15" fill="#C69255" />
+  <circle cx="200" cy="130" r="16" fill="#F39C12" filter="url(#glow)"/>
+  
+  <line x1="450" y1="0" x2="450" y2="90" stroke="#8B5A2B" stroke-width="2"/>
+  <ellipse cx="450" cy="90" rx="26" ry="12" fill="#C69255" />
+  <circle cx="450" cy="98" r="14" fill="#F39C12" filter="url(#glow)"/>
+
+  <line x1="850" y1="0" x2="850" y2="130" stroke="#8B5A2B" stroke-width="2"/>
+  <ellipse cx="850" cy="130" rx="32" ry="16" fill="#C69255" />
+  <circle cx="850" cy="142" r="18" fill="#F39C12" filter="url(#glow)"/>
+
+  <!-- Coffee beans & warm aesthetic background elements -->
+  <circle cx="1000" cy="400" r="180" fill="#2E180E" opacity="0.4" />
+  <circle cx="950" cy="380" r="120" fill="#3D2013" opacity="0.6" />
+</svg>

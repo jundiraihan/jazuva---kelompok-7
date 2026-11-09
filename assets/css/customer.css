@@ -1,0 +1,399 @@
+/* ========================================================
+   JAZUVA RESTAURANT & COFFEE SHOP - CUSTOMER MOBILE STYLES
+   Mobile-First Food & Drink Ordering Interface
+   ======================================================== */
+
+.customer-body {
+  background-color: #F8F3EC;
+  color: #2A211B;
+  min-height: 100vh;
+  padding-bottom: 90px;
+}
+
+.customer-header {
+  background: #331B11;
+  color: #FFFFFF;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.customer-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-customer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-customer-back:hover {
+  background: #C69255;
+  color: #FFFFFF;
+  border-color: #C69255;
+  transform: translateX(-2px);
+}
+
+.btn-customer-back i {
+  font-size: 12px;
+}
+
+.customer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.table-badge-pill {
+  background: #8B5A2B;
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.customer-search-box {
+  margin-top: 14px;
+  position: relative;
+}
+
+.customer-search-input {
+  width: 100%;
+  padding: 10px 16px 10px 42px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: #FFFFFF;
+  font-size: 13.5px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.customer-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8B5A2B;
+  font-size: 15px;
+}
+
+/* Category Filter Bar */
+.category-scroll-bar {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-border-light);
+  scrollbar-width: none;
+}
+.category-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-chip {
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  background: #F4EDE4;
+  color: #554438;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition-fast);
+}
+
+.cat-chip.active {
+  background: #331B11;
+  color: #FFFFFF;
+}
+
+/* Customer Menu Card List */
+.customer-menu-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.customer-menu-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  transition: var(--transition-fast);
+}
+
+.customer-menu-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.customer-card-img-wrap {
+  width: 125px;
+  height: 125px;
+  flex-shrink: 0;
+  background: #F4EDE4;
+  position: relative;
+  overflow: hidden;
+}
+
+.customer-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.customer-menu-card:hover .customer-card-img {
+  transform: scale(1.06);
+}
+
+.customer-item-note-wrapper {
+  margin: 6px 0 10px 0;
+}
+
+.customer-card-note-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #FAF5EE;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  transition: var(--transition-fast);
+}
+
+.customer-card-note-box:focus-within {
+  border-color: #8B5A2B;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(139, 90, 43, 0.12);
+}
+
+.customer-card-note-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 11.5px;
+  font-family: inherit;
+  color: #331B11;
+  outline: none;
+}
+
+.customer-card-note-input::placeholder {
+  color: #A89B8F;
+}
+
+.customer-card-details {
+  padding: 12px 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-item-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 3px;
+}
+
+.customer-item-desc {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.customer-item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.customer-item-price {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.btn-add-cart {
+  background: #331B11;
+  color: #FFFFFF;
+  border: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+}
+
+.btn-add-cart:hover {
+  background: #8B5A2B;
+}
+
+/* Floating Cart Bar */
+.floating-cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #331B11;
+  color: #FFFFFF;
+  padding: 14px 20px;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.18);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.floating-cart-bar.active {
+  display: flex;
+}
+
+.cart-summary-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-count-badge {
+  font-size: 12px;
+  color: #D3C2B4;
+}
+
+.cart-total-price {
+  font-size: 17px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.btn-view-cart {
+  background: #C69255;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 13.5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Customer Cart Drawer / Modal */
+.cart-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(34, 18, 11, 0.6);
+  z-index: 1000;
+  display: none;
+  align-items: flex-end;
+}
+
+.cart-drawer.open {
+  display: flex;
+}
+
+.cart-drawer-sheet {
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.25);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.cart-drawer-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-drawer-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.cart-qty-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cart-drawer-footer {
+  padding: 18px 20px;
+  border-top: 1px solid var(--color-border);
+  background: #FAF8F5;
+}
+
